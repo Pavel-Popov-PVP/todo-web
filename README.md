@@ -1,0 +1,1 @@
+# This is gonna be ToDo list made by Pavel, already created Flowchart for this project so I won't loose any detail
