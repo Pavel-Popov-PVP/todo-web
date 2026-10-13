@@ -1,0 +1,21 @@
+<h1>Showing task</h1>
+
+<table>
+
+  <thead>
+    <tr>
+      <th> ID </th>
+      <th> Task </th>
+      <th> Status </th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr>
+      <td><%= @task.id %></td>
+      <td><%= @task.title %></td>
+      <td><%= @task.is_completed? ? "done" : "in progress" %></td>
+      </tr>
+  </tbody>
+
+</table>
