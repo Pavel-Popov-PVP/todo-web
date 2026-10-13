@@ -76,3 +76,13 @@
 .sort-btn:hover {
   background-color: #217dbb;
 }
+
+.btn-danger {
+  background-color: #c0392b;
+  color: white;
+  border: none;
+}
+
+.btn-danger:hover {
+  background-color: #922b21;
+}
