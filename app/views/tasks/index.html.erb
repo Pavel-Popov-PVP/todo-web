@@ -14,7 +14,7 @@
     <% @tasks.each do |task| %>
     <tr>
       <td><%= task.id %></td>
-      <td><%= link_to task.title, "/tasks/#{task.id}" %></td>
+      <td><%= link_to task.title, task %></td>
       <td><%= task.is_completed? ? "done" : "in progress" %></td>
     </tr>
   <% end %>
