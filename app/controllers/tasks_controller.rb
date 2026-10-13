@@ -43,6 +43,12 @@ class TasksController < ApplicationController
     redirect_to root_path, status: :see_other
   end
 
+  def toggle
+    @task = Task.find(params[:id])
+    @task.update(is_completed: !@task.is_completed)
+    redirect_to root_path, status: :see_other
+  end
+
   private
 
   def task_params
