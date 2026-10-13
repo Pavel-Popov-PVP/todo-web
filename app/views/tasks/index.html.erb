@@ -1,6 +1,6 @@
 <h1>My tasks list</h1>
 
-<table>
+<table class="tasks-table">
 
   <thead>
     <tr>
@@ -14,7 +14,7 @@
     <% @tasks.each do |task| %>
     <tr>
       <td><%= task.id %></td>
-      <td><%= task.title %></td>
+      <td><%= link_to task.title, "/tasks/#{task.id}" %></td>
       <td><%= task.is_completed? ? "done" : "in progress" %></td>
     </tr>
   <% end %>
