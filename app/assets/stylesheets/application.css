@@ -49,3 +49,16 @@
 .btn:hover {
   background-color: #217dbb;
 }
+
+.field_with_errors {
+  display: inline;
+}
+
+.field_with_errors input {
+  border: 2px solid #e74c3c;
+  border-radius: 4px;
+}
+
+.field_with_errors label {
+  color: #e74c3c;
+}
