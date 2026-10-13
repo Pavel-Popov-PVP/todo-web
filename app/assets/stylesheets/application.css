@@ -62,3 +62,17 @@
 .field_with_errors label {
   color: #e74c3c;
 }
+
+.sort-btn {
+  display: inline-block;
+  padding: 4px 8px;
+  margin-left: 4px;
+  background-color: #3498db;
+  color: white;
+  border-radius: 4px;
+  text-decoration: none;
+}
+
+.sort-btn:hover {
+  background-color: #217dbb;
+}

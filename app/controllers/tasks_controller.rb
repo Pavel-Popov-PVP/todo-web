@@ -1,7 +1,8 @@
 class TasksController < ApplicationController
 
   def index # demonstrate all tasks
-    @tasks = Task.all
+    order = params[:order] == "asc" ? :asc : :desc
+    @tasks = Task.order(id: order)
   end
 
   def show # every task got their own ID, we need to see them

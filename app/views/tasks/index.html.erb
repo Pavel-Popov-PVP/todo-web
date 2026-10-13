@@ -6,7 +6,11 @@
 
   <thead>
     <tr>
-      <th> ID </th>
+      <th> 
+        ID 
+        <%= link_to "↑", tasks_path(order: "asc"), class: "sort-btn" %>
+        <%= link_to "↓", tasks_path(order: "desc"), class: "sort-btn" %>
+      </th>
       <th> Task </th>
       <th> Status </th>
       <th> Actions </th>
