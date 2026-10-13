@@ -1,0 +1,14 @@
+<%# We may leave here just full_messages instead _for(:title), work same in situation with only one field %>
+<% if task.errors.full_messages_for(:title).any? %> 
+  <ul>
+    <% task.errors.full_messages_for(:title).each do |message| %>
+      <li><%= message %></li>
+    <% end %>
+  </ul>
+<% end %>
+
+<%= form_with model: task do |form| %>
+  <%= form.label :title %>
+  <%= form.text_field :title %>
+  <%= form.submit %>
+<% end %>
