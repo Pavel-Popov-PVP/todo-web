@@ -8,4 +8,8 @@ class TasksController < ApplicationController
     @task = Task.find(params[:id])
   end
 
+  def new # creating a new task to our list
+    @task = Task.new
+  end
+
 end
