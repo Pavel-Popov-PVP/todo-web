@@ -1,1 +1,11 @@
-<H1> Hello Boys </H1>
+<h1>My tasks list</h1>
+
+
+<ul>
+<% @tasks.each do |task| %>
+  <li>
+    <%= task.title %>
+    <%= task.is_completed? ? "done" : "in progress" %>
+  </li>
+<% end %>
+</ul>
