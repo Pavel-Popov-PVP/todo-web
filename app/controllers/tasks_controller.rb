@@ -1,8 +1,11 @@
 class TasksController < ApplicationController
 
-  def index # demonstrate all tasks
+  def index # demonstrate all tasks + Filter of tasks
     order = params[:order] == "asc" ? :asc : :desc
     @tasks = Task.order(id: order)
+    if params[:filter] == "incomplete"
+      @tasks = @tasks.where(is_completed: false)
+    end
   end
 
   def show # every task got their own ID, we need to see them

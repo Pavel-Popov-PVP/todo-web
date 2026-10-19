@@ -12,7 +12,11 @@
         <%= link_to "↓", tasks_path(order: "desc"), class: "sort-btn" %>
       </th>
       <th> Task </th>
-      <th> Status </th>
+      <th> 
+        Status 
+        <%= link_to "Undone", tasks_path(filter: "incomplete"), class: "sort-btn" %>
+        <%= link_to "All", tasks_path, class: "sort-btn" %>
+      </th>
       <th> Actions </th>
     </tr>
   </thead>
