@@ -13,7 +13,7 @@ class TasksController < ApplicationController
     @task = Task.new
   end
 
-  def create
+  def create # creating a new task to our list
     @task = Task.new(task_params)
 
     if @task.save
@@ -23,11 +23,11 @@ class TasksController < ApplicationController
     end
   end
 
-  def edit
+  def edit # edit already existing task in the list
     @task = Task.find(params[:id])
   end
 
-  def update
+  def update # Finding task for editing and upgrading it
     @task = Task.find(params[:id])
 
     if @task.update(task_params)
@@ -37,13 +37,13 @@ class TasksController < ApplicationController
     end
   end
 
-  def destroy
+  def destroy # Deleting task from the list 
     @task = Task.find(params[:id])
     @task.destroy
     redirect_to root_path, status: :see_other
   end
 
-  def toggle
+  def toggle # changing current status for task from "in progress" to "Done" and reverse
     @task = Task.find(params[:id])
     @task.update(is_completed: !@task.is_completed)
     redirect_to root_path, status: :see_other
@@ -51,7 +51,7 @@ class TasksController < ApplicationController
 
   private
 
-  def task_params
+  def task_params # White list 
     params.require(:task).permit(:title)
   end
 
